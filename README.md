@@ -11,10 +11,6 @@ In Main.tex fill out lines 6-15 for the title page.
 
 In the file content/styling.tex you can set the language under line 20 ```\usepackage[english, ngerman]{babel}```, the later option defines the language being used.
 
-### Setting Header Title
-In the file content/styling.tex you can set the language under line 9 ```\ohead{\textcolor{gray}{Short title up to 8 words}}```.
-
-
 ## Credits
 [Lukas Eisenring](https://github.com/aarauer)
 
