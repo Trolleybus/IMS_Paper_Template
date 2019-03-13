@@ -1,8 +1,6 @@
 # IMS_Paper_Template
 Informationmanagement Seminar UZH FS 2019
 
-Citation Style: APA
-
 ## HOW TO GUIDE
 
 ### Setting title page
