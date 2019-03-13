@@ -5,7 +5,7 @@ Informationmanagement Seminar UZH FS 2019
 
 ### Setting title page
 
-In Main.tex fill out lines 3-13 for the title page.
+In Main.tex fill out lines 6-15 for the title page.
 
 ### Setting Language Preference (German/English)
 
