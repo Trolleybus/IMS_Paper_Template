@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Kopf- und Fußzeilendefinition%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[]{scrlayer-scrpage}	%ohne Trennlinien
+\pagestyle{scrheadings}					%Seitenstil umdefiniert
+\clearscrheadfoot					%Definition leermachen
+\renewcommand{\chapterpagestyle}{scrheadings}		%Kapitelseitenstil umdefiniert
+\renewcommand{\chaptermark}[1]{\markboth{\ #1}{}}	%Definition Kapitel?berschrift=\leftmark
+\ohead{\textcolor{gray}{Short title up to 8 words}}	%äußere Kopfzeile
+\chead{}						%mittlere Kopfzeile
+\ihead{}						%innere Kopfzeile
+\ofoot{\thepage}				%äußere Fu?zeile
+\cfoot{}						%mittlere Fu?zeile
+\ifoot{\textcolor{gray}{9th Information Management Seminar Conference, University of Zurich, Zurich 2019}}%innere Fu?zeile
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%deutsche Zeichenkodierung%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman, english]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%Verschiedene Schriftarten%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{crimson}
+%\usepackage[adobe-utopia]{mathdesign}
+%\usepackage{libertine}
+%\usepackage{lmodern}
+%\usepackage{kpfonts}
+%\usepackage{stix}
+%\usepackage{libertinust1math}
+
+
+
+\usepackage[T1]{fontenc}
+\fontfamily{georgia}
+%\renewcommand*\familydefault{\sfdefault}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%Table of Content Formatting%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+\renewcommand{\cftdotsep}{2} % Abstand zwischen den Punkten im Inhaltsverzeichnis
+\renewcommand{\cftchapfont}{\scshape}
+\renewcommand{\cftsecpagefont}{}
+
+\RedeclareSectionCommand[beforeskip=0pt,afterskip=10pt]{chapter}
+\RedeclareSectionCommand[beforeskip=10pt,afterskip=10pt]{section}
+\RedeclareSectionCommand[beforeskip=10pt,afterskip=10pt]{subsection}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%Zusatzpackages%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{a4wide}
+\usepackage{longtable}
+\usepackage{longtable}
+\usepackage{eurosym}					%Fancy ? Zeichen
+\usepackage{acronym}					%Abk?rzungsverzeichnis
+\usepackage{wasysym}					%Symbole und Sonderzeichen
+\usepackage{longtable}					%Formelzeichentabelle/lange Tabelle
+\usepackage{romannum}					%R?mische Zahlen
+\usepackage{wrapfig}					%Bilder nebeneinander/ Text neben Bild
+\usepackage{floatflt,epsfig} 				%Bilder im eps-format einf?gen
+\usepackage{exceltex}					%Exceldokumente einbinden
+\usepackage{multirow}					%Tabellenzellen verbinden
+\usepackage{graphicx}					%ich glaube ein Vektorzeichentool
+\usepackage[hyphens]{url}				%Websites einbinden
+\usepackage{pdfpages} 					%direkt pdf Datein einbinden
+%\usepackage{amsmath}					%matheumgebung f?r Formeln und Gleichungen
+\usepackage{booktabs}					%ich glaube f?r links im PDF
+\usepackage{capt-of}					%Captions f?r non-float-Objekte
+\usepackage{appendix}					%erm?glicht das erstellen von Anhangsverzeichnissen
+\usepackage{tikz}					%tikz Paket f?r Grafiken + Definitionen
+\usetikzlibrary{arrows,positioning}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+\usepackage{xcolor}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+\usepackage{caption}
+\captionsetup[table]{labelsep=space, labelfont=bf}
+\captionsetup[figure]{labelsep=space, labelfont=bf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%Stil des Literaturverzeichnisses%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{abbrvdin}		%sortiert nach Autor 		- nummeriert [1]
+%\bibliographystyle{unsrtdin}		%sortiert nach Textmarke	- nummeriert [1]
+%\bibliographystyle{aplhadin}		%sortiert nach Autor		- [AUTOR-JAHR]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%special Stuff%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[colorlinks,    				%PDF linked Verzeichnis
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black,
+breaklinks = true,
+allcolors = black] {hyperref}  
+
+\usepackage{geometry}
+
+\geometry{
+	a4paper,
+	total={150mm,247mm},
+	left=30mm,
+	top=25mm,
+	headsep=8mm,
+	footskip=8mm,
+}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{newclude} % user for include

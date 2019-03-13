@@ -1,0 +1,47 @@
+\documentclass[oneside,10pt,a4paper,bibliography=totocnumbered,numbers=enddot]{scrbook} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NEEDS TO BE DEFINED BY THE STUDENT %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\shortTitle}{Short Thesis Title} % used for header
+\newcommand{\longTitle}{Long Thesis Title} % thesis title
+\newcommand{\advisorName}{Advisor Name} % Advisor name
+\newcommand{\supervisorName}{Prof. Dr. Gerhard Schwabe} % Supervisor name
+\newcommand{\studentNumber}{XX-XXX-YYY} % student number
+\newcommand{\studentEmail}{firstname.lastname@uzh.ch} % student email
+\newcommand{\studentName}{Firstname Lastname} % student first name and last name
+\newcommand{\studentStudies}{MSc in Informatics} % student studies
+\newcommand{\abstract}{The abstract is a mandatory element that should summarize the contents of the paper and contain between 100 and 200 words.} % abstract
+\newcommand{\keywords}{Please list your 3-5 keywords here. They should be separated by commas.} % keywords
+
+\input{content/styling}
+\begin{document}
+
+% TITLE PAGE
+\begin{titlepage}
+	\input{content/title_page.tex}
+\end{titlepage}
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+% TABLE OF CONTENT
+\renewcommand*\contentsname{Table of Contents} % Change to Literaturverzeichnis for German
+\tableofcontents
+\addcontentsline{toc}{chapter}{Table of Content} 	
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+% CONTENT OF PAPER
+\begingroup
+\let\clearpage\relax
+\include*{content/introduction}
+\include*{content/background}
+\include*{content/discussion}
+% TODO: Chapters need be added here.
+
+\bibliography{content/biblio}
+\endgroup
+
+
+\end{document}
